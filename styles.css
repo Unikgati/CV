@@ -1,0 +1,180 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap; /* Responsif pada layar kecil */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img{
+    width: 4rem; /* Ukuran logo lebih kecil di layar kecil */
+}
+
+.koleksi {
+    padding: 10px 20px;
+    background: linear-gradient(135deg,#28555e, #3890a0);
+    border: none;
+    border-radius: 2em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.koleksi:hover {
+    background : linear-gradient(135deg, #3890a0, #28555e);
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column-reverse; /* Urutan gambar dan teks diubah di layar kecil */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em; /* Ukuran teks lebih kecil untuk layar kecil */
+    background: linear-gradient(190deg, #3890a0, #28555e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.hero-section p {
+    color: #28555e;
+    margin-bottom: 20px;
+}
+
+.hero-section .cta-dapatkan {
+    padding: 12px 24px;
+    background: linear-gradient(135deg,#e05827, #e07a27);
+    border: none;
+    border-radius: 2em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.hero-section .cta-dapatkan {
+    padding: 10px 20px;
+    background: linear-gradient(135deg,#e05827, #e07a27);
+    border: none;
+    border-radius: 2em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+.cta-dapatkan:hover {
+    background : linear-gradient(135deg, #e07a27, #e05827);
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.koleksi-cv {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.slider {
+    display: flex;
+    gap: 15px;
+    animation: slide 21s infinite linear;
+}
+
+.slide {
+    min-width: 40%;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+.tutorial-section {
+    padding: 30px 15px; /* Padding lebih kecil untuk layar kecil */
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.tutorial-section h2 {
+    font-size: 1.8rem;
+    color: #28555e;
+    margin-bottom: 15px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 15px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tutorial-section p {
+    color: #28555e;
+    line-height: 1.6;
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+
+    .koleksi {
+        margin-top: 10px;
+    }
+
+    .slide {
+        min-width: 80%;
+    }
+}
